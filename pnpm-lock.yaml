@@ -2,11 +2,16 @@ lockfileVersion: 5.4
 
 specifiers:
   '@clerk/nextjs': ^4.25.6
+  '@hookform/resolvers': ^3.3.2
+  '@prisma/client': 5.4.2
+  '@radix-ui/react-dialog': ^1.0.5
   '@radix-ui/react-dropdown-menu': ^2.0.6
+  '@radix-ui/react-label': ^2.0.2
   '@radix-ui/react-slot': ^1.0.2
   '@types/node': ^20
   '@types/react': ^18
   '@types/react-dom': ^18
+  '@uploadthing/react': ^5.7.0
   autoprefixer: ^10
   class-variance-authority: ^0.7.0
   clsx: ^2.0.0
@@ -19,15 +24,24 @@ specifiers:
   prisma: ^5.4.2
   react: ^18
   react-dom: ^18
+  react-dropzone: ^14.2.3
+  react-hook-form: ^7.47.0
   tailwind-merge: ^1.14.0
   tailwindcss: ^3
   tailwindcss-animate: ^1.0.7
   typescript: ^5
+  uploadthing: ^5.7.2
+  zod: ^3.22.4
 
 dependencies:
   '@clerk/nextjs': 4.25.6_geniznlzs656uacumbd4vvx6ke
+  '@hookform/resolvers': 3.3.2_react-hook-form@7.47.0
+  '@prisma/client': 5.4.2_prisma@5.4.2
+  '@radix-ui/react-dialog': 1.0.5_4s4xqdzi7v7cvkwemc5brwkohy
   '@radix-ui/react-dropdown-menu': 2.0.6_4s4xqdzi7v7cvkwemc5brwkohy
+  '@radix-ui/react-label': 2.0.2_4s4xqdzi7v7cvkwemc5brwkohy
   '@radix-ui/react-slot': 1.0.2_uruz7wj5nvbintwsrh6fwqb4ri
+  '@uploadthing/react': 5.7.0_ro3q4st2wodeis42fy67ybi6lq
   class-variance-authority: 0.7.0
   clsx: 2.0.0
   lucide-react: 0.288.0_react@18.2.0
@@ -36,8 +50,12 @@ dependencies:
   prisma: 5.4.2
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-dropzone: 14.2.3_react@18.2.0
+  react-hook-form: 7.47.0_react@18.2.0
   tailwind-merge: 1.14.0
   tailwindcss-animate: 1.0.7_tailwindcss@3.3.3
+  uploadthing: 5.7.2_zod@3.22.4
+  zod: 3.22.4
 
 devDependencies:
   '@types/node': 20.8.8
@@ -217,6 +235,14 @@ packages:
 
   /@floating-ui/utils/0.1.6:
     resolution: {integrity: sha512-OfX7E2oUDYxtBvsuS4e/jSn4Q9Qb6DzgeYtsAdkPZ47znpoNsMgZw0+tVijiv3uGNR6dgNlty6r9rzIzHjtd/A==}
+    dev: false
+
+  /@hookform/resolvers/3.3.2_react-hook-form@7.47.0:
+    resolution: {integrity: sha512-Tw+GGPnBp+5DOsSg4ek3LCPgkBOuOgS5DsDV7qsWNH9LZc433kgsWICjlsh2J9p04H2K66hsXPPb9qn9ILdUtA==}
+    peerDependencies:
+      react-hook-form: ^7.0.0
+    dependencies:
+      react-hook-form: 7.47.0_react@18.2.0
     dev: false
 
   /@humanwhocodes/config-array/0.11.13:
@@ -403,6 +429,24 @@ packages:
       webcrypto-core: 1.7.7
     dev: false
 
+  /@prisma/client/5.4.2_prisma@5.4.2:
+    resolution: {integrity: sha512-2xsPaz4EaMKj1WS9iW6MlPhmbqtBsXAOeVttSePp8vTFTtvzh2hZbDgswwBdSCgPzmmwF+tLB259QzggvCmJqA==}
+    engines: {node: '>=16.13'}
+    requiresBuild: true
+    peerDependencies:
+      prisma: '*'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+    dependencies:
+      '@prisma/engines-version': 5.4.1-2.ac9d7041ed77bcc8a8dbd2ab6616b39013829574
+      prisma: 5.4.2
+    dev: false
+
+  /@prisma/engines-version/5.4.1-2.ac9d7041ed77bcc8a8dbd2ab6616b39013829574:
+    resolution: {integrity: sha512-wvupDL4AA1vf4TQNANg7kR7y98ITqPsk6aacfBxZKtrJKRIsWjURHkZCGcQliHdqCiW/hGreO6d6ZuSv9MhdAA==}
+    dev: false
+
   /@prisma/engines/5.4.2:
     resolution: {integrity: sha512-fqeucJ3LH0e1eyFdT0zRx+oETLancu5+n4lhiYECyEz6H2RDskPJHJYHkVc0LhkU4Uv7fuEnppKU3nVKNzMh8g==}
     requiresBuild: true
@@ -485,6 +529,40 @@ packages:
       '@babel/runtime': 7.23.2
       '@types/react': 18.2.31
       react: 18.2.0
+    dev: false
+
+  /@radix-ui/react-dialog/1.0.5_4s4xqdzi7v7cvkwemc5brwkohy:
+    resolution: {integrity: sha512-GjWJX/AUpB703eEBanuBnIWdIXg6NvJFCXcNlSZk4xdszCdhrJgBoUd1cGk67vFO+WdA2pfI/plOpqz/5GUP6Q==}
+    peerDependencies:
+      '@types/react': '*'
+      '@types/react-dom': '*'
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.23.2
+      '@radix-ui/primitive': 1.0.1
+      '@radix-ui/react-compose-refs': 1.0.1_uruz7wj5nvbintwsrh6fwqb4ri
+      '@radix-ui/react-context': 1.0.1_uruz7wj5nvbintwsrh6fwqb4ri
+      '@radix-ui/react-dismissable-layer': 1.0.5_4s4xqdzi7v7cvkwemc5brwkohy
+      '@radix-ui/react-focus-guards': 1.0.1_uruz7wj5nvbintwsrh6fwqb4ri
+      '@radix-ui/react-focus-scope': 1.0.4_4s4xqdzi7v7cvkwemc5brwkohy
+      '@radix-ui/react-id': 1.0.1_uruz7wj5nvbintwsrh6fwqb4ri
+      '@radix-ui/react-portal': 1.0.4_4s4xqdzi7v7cvkwemc5brwkohy
+      '@radix-ui/react-presence': 1.0.1_4s4xqdzi7v7cvkwemc5brwkohy
+      '@radix-ui/react-primitive': 1.0.3_4s4xqdzi7v7cvkwemc5brwkohy
+      '@radix-ui/react-slot': 1.0.2_uruz7wj5nvbintwsrh6fwqb4ri
+      '@radix-ui/react-use-controllable-state': 1.0.1_uruz7wj5nvbintwsrh6fwqb4ri
+      '@types/react': 18.2.31
+      '@types/react-dom': 18.2.14
+      aria-hidden: 1.2.3
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-remove-scroll: 2.5.5_uruz7wj5nvbintwsrh6fwqb4ri
     dev: false
 
   /@radix-ui/react-direction/1.0.1_uruz7wj5nvbintwsrh6fwqb4ri:
@@ -603,6 +681,27 @@ packages:
       '@radix-ui/react-use-layout-effect': 1.0.1_uruz7wj5nvbintwsrh6fwqb4ri
       '@types/react': 18.2.31
       react: 18.2.0
+    dev: false
+
+  /@radix-ui/react-label/2.0.2_4s4xqdzi7v7cvkwemc5brwkohy:
+    resolution: {integrity: sha512-N5ehvlM7qoTLx7nWPodsPYPgMzA5WM8zZChQg8nyFJKnDO5WHdba1vv5/H6IO5LtJMfD2Q3wh1qHFGNtK0w3bQ==}
+    peerDependencies:
+      '@types/react': '*'
+      '@types/react-dom': '*'
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.23.2
+      '@radix-ui/react-primitive': 1.0.3_4s4xqdzi7v7cvkwemc5brwkohy
+      '@types/react': 18.2.31
+      '@types/react-dom': 18.2.14
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /@radix-ui/react-menu/2.0.6_4s4xqdzi7v7cvkwemc5brwkohy:
@@ -1069,6 +1168,57 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
+  /@uploadthing/mime-types/0.2.1:
+    resolution: {integrity: sha512-UDySsPbdi7wp52WG7mp5CiZwaTvokDubqhm1xhFm73Bqhp0PsGbwSSF5PdCXH4fe8Y4EKGrMyWQ4i1fF9+DVVQ==}
+    dev: false
+
+  /@uploadthing/react/5.7.0_ro3q4st2wodeis42fy67ybi6lq:
+    resolution: {integrity: sha512-rSBzoC2eMRM2d6Mpis6RXfo1Y5JsV7oJanTmaVdltFLRxbO/4lwK1kvHM4qwDUvn01UpxBtcVayimMBXNJ0V8Q==}
+    peerDependencies:
+      next: '*'
+      react: ^17.0.2 || ^18.0.0
+      uploadthing: ^5.0.0
+    peerDependenciesMeta:
+      next:
+        optional: true
+    dependencies:
+      '@uploadthing/shared': 5.2.5_zod@3.22.4
+      attr-accept: 2.2.2
+      file-selector: 0.6.0
+      next: 13.5.6_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      tailwind-merge: 1.14.0
+      uploadthing: 5.7.2_zod@3.22.4
+    transitivePeerDependencies:
+      - '@uploadthing/mime-types'
+      - zod
+    dev: false
+
+  /@uploadthing/shared/5.2.5_3m7titkmphg2qnptjtv5nfrvzy:
+    resolution: {integrity: sha512-b6Nr0YzV9iinVK9OydBVQH0xPQEPgw7ty/q9aQbEnRQedc4TqARaYQEoMvTu7bRuiK7MIpKodzVTQdFKHhMLTg==}
+    peerDependencies:
+      '@uploadthing/mime-types': ^0.2.0
+      zod: ^3.22.3
+    peerDependenciesMeta:
+      '@uploadthing/mime-types':
+        optional: true
+    dependencies:
+      '@uploadthing/mime-types': 0.2.1
+      zod: 3.22.4
+    dev: false
+
+  /@uploadthing/shared/5.2.5_zod@3.22.4:
+    resolution: {integrity: sha512-b6Nr0YzV9iinVK9OydBVQH0xPQEPgw7ty/q9aQbEnRQedc4TqARaYQEoMvTu7bRuiK7MIpKodzVTQdFKHhMLTg==}
+    peerDependencies:
+      '@uploadthing/mime-types': ^0.2.0
+      zod: ^3.22.3
+    peerDependenciesMeta:
+      '@uploadthing/mime-types':
+        optional: true
+    dependencies:
+      zod: 3.22.4
+    dev: false
+
   /acorn-jsx/5.3.2_acorn@8.10.0:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
     peerDependencies:
@@ -1232,6 +1382,11 @@ packages:
 
   /asynckit/0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
+    dev: false
+
+  /attr-accept/2.2.2:
+    resolution: {integrity: sha512-7prDjvt9HmqiZ0cl5CRjtS84sEyhsHP2coDkaZKRKVfCDo9s7iw7ChVmar78Gu9pC4SoR/28wFu/G5JJhTnqEg==}
+    engines: {node: '>=4'}
     dev: false
 
   /autoprefixer/10.4.16_postcss@8.4.31:
@@ -1949,6 +2104,13 @@ packages:
     dependencies:
       flat-cache: 3.1.1
     dev: true
+
+  /file-selector/0.6.0:
+    resolution: {integrity: sha512-QlZ5yJC0VxHxQQsQhXvBaC7VRJ2uaxTf+Tfpu4Z/OcVQJVpZO+DGU0rkoVW5ce2SccxugvpBJoMvUs59iILYdw==}
+    engines: {node: '>= 12'}
+    dependencies:
+      tslib: 2.6.2
+    dev: false
 
   /fill-range/7.0.1:
     resolution: {integrity: sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==}
@@ -2882,7 +3044,6 @@ packages:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       react-is: 16.13.1
-    dev: true
 
   /punycode/2.3.0:
     resolution: {integrity: sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==}
@@ -2918,9 +3079,29 @@ packages:
       scheduler: 0.23.0
     dev: false
 
+  /react-dropzone/14.2.3_react@18.2.0:
+    resolution: {integrity: sha512-O3om8I+PkFKbxCukfIR3QAGftYXDZfOE2N1mr/7qebQJHs7U+/RSL/9xomJNpRg9kM5h9soQSdf0Gc7OHF5Fug==}
+    engines: {node: '>= 10.13'}
+    peerDependencies:
+      react: '>= 16.8 || 18.0.0'
+    dependencies:
+      attr-accept: 2.2.2
+      file-selector: 0.6.0
+      prop-types: 15.8.1
+      react: 18.2.0
+    dev: false
+
+  /react-hook-form/7.47.0_react@18.2.0:
+    resolution: {integrity: sha512-F/TroLjTICipmHeFlMrLtNLceO2xr1jU3CyiNla5zdwsGUGu2UOxxR4UyJgLlhMwLW/Wzp4cpJ7CPfgJIeKdSg==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
-    dev: true
 
   /react-remove-scroll-bar/2.3.4_uruz7wj5nvbintwsrh6fwqb4ri:
     resolution: {integrity: sha512-63C4YQBUt0m6ALadE9XV56hV8BgJWDmmTPY758iIJjfQKt2nYwoUrPk0LXRXcB/yIj82T1/Ixfdpdk68LwIB0A==}
@@ -3475,6 +3656,16 @@ packages:
       picocolors: 1.0.0
     dev: true
 
+  /uploadthing/5.7.2_zod@3.22.4:
+    resolution: {integrity: sha512-VgNJP+gn4k835BV6E+oOq7FLGNAlh9fUB+jAotvplvQBxCkglEKlI7Hd7iynydbx0wLC1R/idRpJJNiMCAR33A==}
+    engines: {node: '>=18.13.0'}
+    dependencies:
+      '@uploadthing/mime-types': 0.2.1
+      '@uploadthing/shared': 5.2.5_3m7titkmphg2qnptjtv5nfrvzy
+    transitivePeerDependencies:
+      - zod
+    dev: false
+
   /uri-js/4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
@@ -3612,3 +3803,7 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  /zod/3.22.4:
+    resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
+    dev: false

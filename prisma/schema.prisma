@@ -42,7 +42,7 @@ model Server {
   updatedAt DateTime @updatedAt
 
   @@index([profileId])
-}
+} 
 
 enum MemberRole {
   ADMIN
