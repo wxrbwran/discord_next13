@@ -2,9 +2,10 @@
 
 import React, { useEffect, useState } from "react";
 import * as z from "zod";
+import axios from "axios";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-
+import { useRouter } from "next/navigation";
 import {
   Dialog,
   DialogContent,
@@ -41,6 +42,7 @@ const InitialModal = () => {
   useEffect(() => {
     setIsMounted(true);
   }, []);
+  const router = useRouter();
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -53,6 +55,14 @@ const InitialModal = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     console.log("values", values);
+    try {
+      await axios.post("/api/servers", values);
+      form.reset();
+      router.refresh();
+      window.location.reload();
+    } catch (error) {
+      console.log(error);
+    }
   };
   if (!isMounted) {
     return null;
@@ -71,9 +81,6 @@ const InitialModal = () => {
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <div className="space-y-8 px-6">
-              <div className="flex items-center justify-center text-center">
-                todo: image upload
-              </div>
               <FormField
                 control={form.control}
                 name="imageUrl"
