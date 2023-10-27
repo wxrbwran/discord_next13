@@ -12,32 +12,33 @@ const ServerIdLayout = async ({
   children: React.ReactNode;
   params: { serverId: string };
 }) => {
-  // const profile = await currentProfile();
+  console.log("ServerIdLayout", params);
+  const profile = await currentProfile();
 
-  // if (!profile) {
-  //   return redirectToSignIn();
-  // }
+  if (!profile) {
+    return redirectToSignIn();
+  }
 
-  // const server = await db.server.findUnique({
-  //   where: {
-  //     id: params.serverId,
-  //     members: {
-  //       some: {
-  //         profileId: profile.id,
-  //       },
-  //     },
-  //   },
-  // });
+  const server = await db.server.findUnique({
+    where: {
+      id: params.serverId,
+      members: {
+        some: {
+          profileId: profile.id,
+        },
+      },
+    },
+  });
+  console.log("ServerIdLayout server", server);
 
-  // if (!server) {
-  //   return redirect("/");
-  // }
+  if (!server) {
+    return redirect("/");
+  }
 
   return (
     <div className="h-full">
       <div className="hidden md:flex h-full w-60 z-20 flex-col fixed inset-y-0">
-        ServerSidebar
-        {/* <ServerSidebar serverId={params.serverId} /> */}
+        <ServerSidebar serverId={params.serverId} />
       </div>
       <main className="h-full md:pl-60">{children}</main>
     </div>
