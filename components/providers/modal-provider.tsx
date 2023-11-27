@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import CreateServerModal from "../modals/create-server-modal";
+import { CreateServerModal } from "../modals/create-server-modal";
 import { InviteModal } from "../modals/invite-modal";
 import { EditServerModal } from "../modals/edit-server-modal";
+
+console.log("CreateServerModal", CreateServerModal);
 
 console.log("InviteModal", InviteModal);
 
