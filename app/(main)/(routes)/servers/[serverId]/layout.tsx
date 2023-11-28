@@ -12,7 +12,7 @@ const ServerIdLayout = async ({
   children: React.ReactNode;
   params: { serverId: string };
 }) => {
-  console.log("ServerIdLayout", params);
+  // console.log("ServerIdLayout", params);
   const profile = await currentProfile();
 
   if (!profile) {
@@ -29,7 +29,7 @@ const ServerIdLayout = async ({
       },
     },
   });
-  console.log("ServerIdLayout server", server);
+  // console.log("ServerIdLayout server", server);
 
   if (!server) {
     return redirect("/");

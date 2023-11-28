@@ -9,6 +9,7 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
   relationMode = "prisma"
+  // enabled  = true
 }
 
 model Profile {
@@ -42,7 +43,7 @@ model Server {
   updatedAt DateTime @updatedAt
 
   @@index([profileId])
-} 
+}
 
 enum MemberRole {
   ADMIN
