@@ -38,5 +38,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 https://www.youtube.com/watch?v=ZbX4Ok9YX94
 
 npx prisma generate
+npx prisma migrate dev --name init
 npx prisma db push
 npx prisma migrate reset
+
+pnpm prisma migrate dev: 在写完一张表的结构后 需要 pnpm prisma migrate dev --name name...生成迁移文件
+
+npx prisma db pull：自动根据已经存在的数据库生成文件 prisman/schema.prisma ，而不需要向上面一样手动定义
+
+npx prisma db push：使用 db push 来改变现有的原型架构，例如在某一个表中新增某个字段
+npx prisma migrate reset: 如果你是使用自动迁移的方法导入映射关系，请确保你的数据留有备份，执行此操作在没有数据迁移记录的情况下，可能导致数据丢失。通过此命令自行 重置 数据库以撤消手动更改或 db push 的实验

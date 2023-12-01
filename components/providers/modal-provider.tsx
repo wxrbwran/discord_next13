@@ -6,12 +6,14 @@ import { InviteModal } from "../modals/invite-modal";
 import { EditServerModal } from "../modals/edit-server-modal";
 import { MembersModal } from "../modals/members-modal";
 import { CreateChannelModal } from "../modals/create-channel-modal";
+import { DeleteServerModal } from "../modals/delete-server-modal";
+import { LeaveServerModal } from "../modals/leave-server-modal";
 
-console.log("CreateServerModal", CreateServerModal);
+// console.log("CreateServerModal", CreateServerModal);
 
-console.log("InviteModal", InviteModal);
+// console.log("InviteModal", InviteModal);
 
-console.log("EditServerModal", EditServerModal);
+// console.log("EditServerModal", EditServerModal);
 const ModalProvider = () => {
   const [isMounted, setIsMounted] = useState(false);
   useEffect(() => {
@@ -27,6 +29,8 @@ const ModalProvider = () => {
       <EditServerModal />
       <MembersModal />
       <CreateChannelModal />
+      <DeleteServerModal />
+      <LeaveServerModal />
     </>
   );
 };
