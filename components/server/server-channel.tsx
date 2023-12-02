@@ -6,7 +6,7 @@ import { useParams, useRouter } from "next/navigation";
 
 import { cn } from "@/lib/utils";
 import { ActionTooltip } from "@/components/action-tooltip";
-import { useModal } from "@/hooks/use-modal-store";
+import { useModal, ModalType } from "@/hooks/use-modal-store";
 
 interface ServerChannelProps {
   channel: Channel;
